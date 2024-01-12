@@ -8,7 +8,7 @@ html(lang='en')
         meta(name='description', content)
         meta(name='author', content)
 
-        title Modern Business - Start Bootstrap Template
+        title Cameron K. Brooks
 
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
@@ -22,12 +22,12 @@ html(lang='en')
             // Navigation
             include includes/navbar.pug
 
-            // Page content
+            // Page content ------------------------------------------------
             section.py-5
 
                 .container.px-5
 
-                    // Contact form
+                    // Contact form ------------------------------------------------
                     .bg-light.rounded-3.py-5.px-4.px-md-5.mb-5
                         .text-center.mb-5
                             .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
@@ -48,7 +48,7 @@ html(lang='en')
 
                                 form#contactForm(data-sb-form-api-token='API_TOKEN')
 
-                                    // Name input
+                                    // Name input ------------------------------------------------
                                     .form-floating.mb-3
                                         input#name.form-control(
                                             type='text',
@@ -59,7 +59,7 @@ html(lang='en')
                                         .invalid-feedback(data-sb-feedback='name:required')
                                             | A name is required.
                                     
-                                    // Email address input
+                                    // Email address input ------------------------------------------------
                                     .form-floating.mb-3
                                         input#email.form-control(
                                             type='email',
@@ -72,7 +72,7 @@ html(lang='en')
                                         .invalid-feedback(data-sb-feedback='email:email')
                                             | Email is not valid.
                                     
-                                    // Phone number input
+                                    // Phone number input ------------------------------------------------
                                     .form-floating.mb-3
                                         input#phone.form-control(
                                             type='tel',
@@ -83,7 +83,7 @@ html(lang='en')
                                         .invalid-feedback(data-sb-feedback='phone:required')
                                             | A phone number is required.
                                     
-                                    // Message input
+                                    // Message input ------------------------------------------------
                                     .form-floating.mb-3
                                         textarea#message.form-control(
                                             type='text',
@@ -117,7 +117,7 @@ html(lang='en')
                                     .d-grid
                                         button#submitButton.btn.btn-primary.btn-lg.disabled(type='submit') Submit
 
-                    // Contact cards
+                    // Contact cards ------------------------------------------------
                     .row.gx-5.row-cols-2.row-cols-lg-4.py-5
                         .col
                             .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
