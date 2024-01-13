@@ -28,60 +28,93 @@ html(lang='en')
                     .row.gx-5.align-items-center.justify-content-center
                         .col-lg-8.col-xl-7.col-xxl-6
                             .my-5.text-center.text-xl-start
-                                h1.display-5.fw-bolder.text-white.mb-2 A Bootstrap 5 template for modern businesses
-                                p.lead.fw-normal.text-white-50.mb-4 Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit! 
+                                h1.display-5.fw-bolder.text-white.mb-2 Sharing My Journey, Experiences, and Adventures
+                                p.lead.fw-normal.text-white-50.mb-4 This is a virtual collection of my developments, innovations, ideas, thoughts, opinions, accomplishments, research projects, engineering solutions, contributions, and favourite moments. 
                                 .d-grid.gap-3.d-sm-flex.justify-content-sm-center.justify-content-xl-start
-                                    a.btn.btn-primary.btn-lg.px-4.me-sm-3(href='#features') Get Started
-                                    a.btn.btn-outline-light.btn-lg.px-4(href='#!') Learn More
+                                    a.btn.btn-primary.btn-lg.px-4.me-sm-3(href='#features') Learn More
+                                    a.btn.btn-outline-light.btn-lg.px-4(href='http://logseq.cameronbrooks.net/') Knowledge Graph
                         .col-xl-5.col-xxl-6.d-none.d-xl-block.text-center
-                            img.img-fluid.rounded-3.my-5(src='https://dummyimage.com/600x400/343a40/6c757d', alt='...')
+                            img.img-fluid.rounded-3.my-5(src='src\assets\recurtreescad_force_points.PNG', alt='...')
 
             // Features section ------------------------------------------------
             section#features.py-5
                 .container.px-5.my-5
                     .row.gx-5
                         .col-lg-4.mb-5.mb-lg-0
-                            h2.fw-bolder.mb-0 A better way to start building.
+                            h2.fw-bolder.mb-0 Learn more about some of the things I'm building.
                         .col-lg-8
                             .row.gx-5.row-cols-1.row-cols-md-2
                                 .col.mb-5.h-100
                                     .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
                                         i.bi.bi-collection
-                                    h2.h5 Featured title
+                                    h2.h5 Portfolio Gallery
                                     p.mb-0
-                                        | Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.
+                                        | Browse through a gallery-style portfolio of all my works.
                                 .col.mb-5.h-100
                                     .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
                                         i.bi.bi-building
-                                    h2.h5 Featured title
+                                    h2.h5 Business Ventures
                                     p.mb-0
-                                        | Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.
+                                        | Work-in-progress. Coming soon!
                                 .col.mb-5.mb-md-0.h-100
                                     .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
                                         i.bi.bi-toggles2
-                                    h2.h5 Featured title
+                                    h2.h5 Blog
                                     p.mb-0
-                                        | Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.
+                                        | Visit my blog for thoughts, tutorials, and insights.
                                 .col.h-100
                                     .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
                                         i.bi.bi-toggles2
-                                    h2.h5 Featured title
+                                    h2.h5 External Contributions
                                     p.mb-0
-                                        | Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.
+                                        | Explore my engagements and contributions beyond this site, from wikis to open-source to community-driven content.
 
-            // Testimonial section ------------------------------------------------
+            // Adjusted Carousel Display -----------------------------------------------
             .py-5.bg-light
-                .container.px-5.my-5
+                .container.px-5.my-5  
                     .row.gx-5.justify-content-center
-                        .col-lg-10.col-xl-7
-                            .text-center
-                                .fs-4.mb-4.fst-italic "Working with Start Bootstrap templates has saved me tons of development time when building new projects! Starting with a Bootstrap template just makes things easier!"
-                                .d-flex.align-items-center.justify-content-center
-                                    img.rounded-circle.me-3(src='https://dummyimage.com/40x40/ced4da/6c757d', alt='...')
-                                    .fw-bold
-                                        | Tom Ato
-                                        span.fw-bold.text-primary.mx-1 /
-                                        | CEO, Pomodoro
+                        .col-12
+                            .carousel.slide#carouselExampleIndicators(data-bs-ride='carousel') 
+                                .carousel-inner
+                                    // Example Project 1 - Active item
+                                    .carousel-item.active
+                                        img.d-block.w-100(src='https://dummyimage.com/800x350/ced4da/6c757d', alt='Project 1')
+                                        .carousel-caption.d-none.d-md-block.bg-dark.opacity-75.rounded
+                                            h5.text-white Project Title 1
+                                            p.text-white Short description or highlight of Project 1.
+                                    // Example Project 2
+                                    .carousel-item
+                                        img.d-block.w-100(src='https://dummyimage.com/800x350/d6d8db/6c757d', alt='Project 2')
+                                        .carousel-caption.d-none.d-md-block.bg-dark.opacity-75.rounded
+                                            h5.text-white Project Title 2
+                                            p.text-white Short description or highlight of Project 2.
+                                    // Example Project 3
+                                    .carousel-item
+                                        img.d-block.w-100(src='https://dummyimage.com/800x350/adb5bd/6c757d', alt='Project 3')
+                                        .carousel-caption.d-none.d-md-block.bg-dark.opacity-75.rounded
+                                            h5.text-white Project Title 3
+                                            p.text-white Short description or highlight of Project 3.
+                                    // Example Project 4
+                                    .carousel-item
+                                        img.d-block.w-100(src='https://dummyimage.com/800x350/999/fff', alt='Project 4')
+                                        .carousel-caption.d-none.d-md-block.bg-dark.opacity-75.rounded
+                                            h5.text-white Project Title 4
+                                            p.text-white Short description or highlight of Project 4.
+                                    // Example Project 5
+                                    .carousel-item
+                                        img.d-block.w-100(src='https://dummyimage.com/800x350/777/fff', alt='Project 5')
+                                        .carousel-caption.d-none.d-md-block.bg-dark.opacity-75.rounded
+                                            h5.text-white Project Title 5
+                                            p.text-white Short description or highlight of Project 5.
+                                    // Add more items if needed...
+                                // Controls
+                                a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-bs-slide='prev')
+                                    span.carousel-control-prev-icon(aria-hidden='true')
+                                    span.visually-hidden Previous
+                                a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-bs-slide='next')
+                                    span.carousel-control-next-icon(aria-hidden='true')
+                                    span.visually-hidden Next
+
 
             // Blog preview section ------------------------------------------------
             section.py-5
@@ -89,8 +122,8 @@ html(lang='en')
                     .row.gx-5.justify-content-center
                         .col-lg-8.col-xl-6
                             .text-center
-                                h2.fw-bolder From our blog
-                                p.lead.fw-normal.text-muted.mb-5 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque fugit ratione dicta mollitia. Officiis ad.
+                                h2.fw-bolder The latest from my blog
+                                p.lead.fw-normal.text-muted.mb-5 According to the Dunning-Kruger Effect, the less you know, the more you think you know. By this logic, my overwhelming confidence simply confirms I'm always right...
                     .row.gx-5
                         .col-lg-4.mb-5
                             .card.h-100.shadow.border-0
@@ -145,13 +178,13 @@ html(lang='en')
                     aside.bg-primary.bg-gradient.rounded-3.p-4.p-sm-5.mt-5
                         .d-flex.align-items-center.justify-content-between.flex-column.flex-xl-row.text-center.text-xl-start
                             .mb-4.mb-xl-0
-                                .fs-3.fw-bold.text-white New products, delivered to you.
-                                .text-white-50 Sign up for our newsletter for the latest updates.
+                                .fs-3.fw-bold.text-white Quality content, delivered to you.
+                                .text-white-50 Sign up for my newsletter for the latest updates.
                             .ms-xl-4
                                 .input-group.mb-2
                                     input.form-control(type='text', placeholder='Email address...', aria-label='Email address...', aria-describedby='button-newsletter')
                                     button#button-newsletter.btn.btn-outline-light(type='button') Sign up
-                                .small.text-white-50 We care about privacy, and will never share your data.
+                                .small.text-white-50 As an advocate of privacy, I will never share your data.
 
         // Footer 
         include includes/footer.pug
