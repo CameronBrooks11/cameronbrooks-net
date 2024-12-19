@@ -31,10 +31,6 @@
     "contributors": [
         "David Miller (https://davidmiller.io/)"
     ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/StartBootstrap/startbootstrap-modern-business.git"
-    },
     "dependencies": {
         "bootstrap": "5.2.3"
     },

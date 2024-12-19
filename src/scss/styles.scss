@@ -1,11 +1,62 @@
-// Import Bootstrap
+// ============================================
+// 1. Bootstrap Variable Overrides
+// ============================================
+
+// Primary color for Bootstrap components (Turquoise)
+$primary: #39b9ad;
+
+// Secondary color (optional, can be another shade or complementary color)
+$secondary: #6C757D;
+
+// Body background and text colors
+$body-bg: #ffffff; // White background
+$body-color: #333333; // Dark grey text
+
+// Light grey for backgrounds and borders
+$light: #f8f9fa;
+
+// Dark grey (optional, for text or borders)
+$dark: #343a40;
+
+// Adjust Bootstrap's default link color
+$link-color: $primary;
+
+// Adjust Bootstrap's navbar colors
+$navbar-light-bg: $light;
+$navbar-light-color: $primary;
+
+// Adjust Bootstrap button colors
+$btn-primary-bg: $primary;
+$btn-primary-border: $primary;
+$btn-primary-hover-bg: darken($primary, 10%);
+$btn-primary-hover-border: darken($primary, 10%);
+
+$btn-secondary-bg: $secondary;
+$btn-secondary-border: $secondary;
+$btn-secondary-hover-bg: darken($secondary, 10%);
+$btn-secondary-hover-border: darken($secondary, 10%);
+
+// ============================================
+// 2. Import Bootstrap
+// ============================================
+
 @import "bootstrap/scss/bootstrap.scss";
+
+// ============================================
+// 3. Global Styles and Resets
+// ============================================
 
 // Resets for body and html height for sticky footer
 body,
 html {
     height: 100%;
+    background-color: $body-bg;
+    color: $body-color;
 }
+
+// ============================================
+// 4. Custom Component Styles
+// ============================================
 
 // Custom SCSS for feature component with Bootstrap icon
 .feature {
@@ -15,14 +66,117 @@ html {
     height: 3rem;
     width: 3rem;
     font-size: 1.5rem;
+    background-color: $light; // Light grey background
+    color: $primary; // Turquoise text
+    border: 2px solid $primary; // Turquoise border
+    border-radius: 0.5rem; // Rounded corners for a modern look
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+        background-color: $primary; // Turquoise background on hover
+        color: #ffffff; // White text on hover
+    }
 }
 
-// Background image for featured blog post
-.bg-featured-blog {
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 15rem;
+// ============================================
+// 5. Typography and Links
+// ============================================
+
+// Style for headings to use the primary color
+h1, h2, h3, h4, h5, h6 {
+    color: $primary;
+}
+
+// Link styles
+a {
+    color: $primary;
+    text-decoration: none;
+
+    &:hover {
+        color: darken($primary, 10%);
+        text-decoration: underline;
+    }
+}
+
+// ============================================
+// 6. Button Styles (Optional Enhancements)
+// ============================================
+
+// Example of additional button customization (if needed)
+.btn-custom {
+    background-color: $primary;
+    border-color: $primary;
+    color: #ffffff;
+
+    &:hover {
+        background-color: darken($primary, 10%);
+        border-color: darken($primary, 10%);
+        color: #ffffff;
+    }
+}
+
+// ============================================
+// 7. Navbar Customization (Optional)
+// ============================================
+
+.navbar {
+    background-color: $navbar-light-bg;
+    .navbar-brand {
+        color: $navbar-light-color;
+
+        &:hover {
+            color: darken($navbar-light-color, 10%);
+        }
+    }
+    .navbar-nav .nav-link {
+        color: $navbar-light-color;
+
+        &:hover {
+            color: darken($navbar-light-color, 10%);
+        }
+    }
+}
+
+// ============================================
+// 8. Additional Custom Styles
+// ============================================
+
+// Example: Card component customization
+.card {
+    border: 1px solid $light;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    .card-header {
+        background-color: $primary;
+        color: #ffffff;
+        border-bottom: 1px solid $light;
+    }
+
+    .card-body {
+        background-color: #ffffff;
+        color: $body-color;
+    }
+
+    .card-footer {
+        background-color: $light;
+        border-top: 1px solid $light;
+    }
+}
+
+// ============================================
+// 9. Responsive Adjustments (Optional)
+// ============================================
+
+// Example of responsive padding
+.container {
+    padding: 1rem;
+
+    @media (min-width: 576px) {
+        padding: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        padding: 3rem;
+    }
 }
