@@ -46,27 +46,43 @@ html(lang='en')
                             .row.gx-5.row-cols-1.row-cols-md-2
                                 .col.mb-5.h-100
                                     .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
-                                        i.bi.bi-collection
-                                    h2.h5 Portfolio Gallery
+                                        i.bi.bi-graph-up
+                                    h2.h5 Knowledge Graph
                                     p.mb-0
-                                        | Browse through a gallery-style portfolio of all my works.
+                                        | Explore my interactive knowledge graph that organizes and visualizes connections between ideas, projects, and contributions.
+                                    a.btn.btn-light.btn-sm.mt-2(href='http://nexus.cameronbrooks.net/' target='_blank') Visit Knowledge Graph
+                                .col.mb-5.h-100
+                                    .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
+                                        i.bi.bi-share
+                                    h2.h5 External Contributions
+                                    p.mb-0
+                                        | Explore my engagements and contributions beyond this site, from wikis to open-source to community-driven content.
+                                    a.btn.btn-light.btn-sm.mt-2(href='external_contrib.html') Visit External Contributions
                                 .col.mb-5.h-100
                                     .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
                                         i.bi.bi-building
                                     h2.h5 Business Ventures
                                     p.mb-0
-                                        | Work-in-progress. Coming soon!
-
-                                .col.h-100
+                                        | Discover my entrepreneurial initiatives and collaborations, showcasing innovation and impact.
+                                    a.btn.btn-light.btn-sm.mt-2(href='https://integrumsys.com' target='_blank') Visit Business Ventures
+                                .col.mb-5.h-100
                                     .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
-                                        i.bi.bi-toggles2
-                                    h2.h5 External Contributions
+                                        i.bi.bi-book
+                                    h2.h5 Publications
                                     p.mb-0
-                                        | Explore my engagements and contributions beyond this site, from wikis to open-source to community-driven content.
+                                        | Browse through my publications, articles, and research papers highlighting my academic and professional journey.
+                                    a.btn.btn-light.btn-sm.mt-2(href='https://orcid.org/0000-0002-1275-3267' target='_blank') ORCID Profile
+                                    br
+                                    a.btn.btn-light.btn-sm.mt-2(href='https://scholar.google.com/citations?user=tN1pSrkAAAAJ&hl=en&oi=ao' target='_blank') Google Scholar
+
 
             // Adjusted Carousel Display -----------------------------------------------
             .py-5.bg-light
                 .container.px-5.my-5  
+                    .row.gx-5.justify-content-center
+                        .col-12
+                            h2.text-center.fw-bolder.mb-4
+                                | ...or browse my portfolio:
                     .row.gx-5.justify-content-center
                         .col-12
                             .carousel.slide#carouselExampleIndicators(data-bs-ride='carousel') 
@@ -109,7 +125,6 @@ html(lang='en')
                                 a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-bs-slide='next')
                                     span.carousel-control-next-icon(aria-hidden='true')
                                     span.visually-hidden Next
-
 
         // Footer 
         include includes/footer.pug

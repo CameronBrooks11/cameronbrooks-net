@@ -1,0 +1,44 @@
+doctype html
+html(lang='en')
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='')
+        meta(name='author', content='')
+
+        title External Contributions
+
+        // Favicon
+        link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
+
+        include includes/css.pug
+
+    body.d-flex.flex-column.h-100
+
+        main.flex-shrink-0
+
+            // Navigation
+            include includes/navbar.pug
+
+            // Page Content
+            section.py-5
+                .container.px-5.my-5
+                    .text-center.mb-5
+                        h1.fw-bolder External Contributions
+                        p.lead.fw-normal.text-muted.mb-0 Explore my engagements and contributions beyond this site, showcasing my work in wikis, open-source, and community-driven content.
+                    ul.list-group.list-group-flush
+                        li.list-group-item
+                            a(href='https://github.com/cameronbrooks11' target='_blank') My GitHub Repositories
+                        li.list-group-item
+                            a(href='https://gitlab.com/cameronkbrooks' target='_blank') My GitLab Projects
+                        li.list-group-item
+                            a(href='https://osf.io/wcre4/' target='_blank') My OSF Contributions
+                        li.list-group-item
+                            a(href='https://www.appropedia.org/User:CameronBrooks11' target='_blank') My Appropedia Articles
+
+        // Footer
+        include includes/footer.pug
+
+        include includes/scripts.pug
