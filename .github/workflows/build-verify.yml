@@ -1,0 +1,38 @@
+# The VPS serves the committed dist/ and never runs a build, so dist/ drifting
+# from src/ is invisible in production until someone notices the site is stale.
+# This rebuilds and fails if the result differs from what is committed.
+name: Build verify
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Fail if dist/ differs from the committed tree
+        run: |
+          if ! git diff --exit-code --stat -- dist/; then
+            echo "::error::dist/ does not match a clean rebuild. Run 'npm run build' and commit the result."
+            exit 1
+          fi
+          echo "dist/ reproduces exactly."
