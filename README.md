@@ -40,3 +40,43 @@ access key. Copy this and paste it into the `data-sb-form-api-token='API_TOKEN'`
 
 If you aren't using SB Forms, simply delete the custom data attributes from the form, and remove the link above the
 closing `</body>` tag to SB Forms.
+
+## Deployment
+
+The site runs on a Vultr VPS behind Cloudflare. Apache serves the committed
+`dist/` directly — **the server never runs a build**, so whatever is committed
+under `dist/` is what visitors get.
+
+Deployment is a manual pull:
+
+```bash
+ssh cam_admin@cameronbrooks.net   # or root@
+cd /var/www/html/cameronbrooks.net
+sudo git pull --ff-only origin master
+```
+
+No restart is needed; Apache reads the files on each request.
+
+Because `dist/` is committed rather than built on deploy, a source change is only
+live once the rebuilt `dist/` is committed too:
+
+```bash
+npm ci
+npm run build
+git add dist/ && git commit
+```
+
+The `Build verify` workflow enforces this — it rebuilds on every PR and fails if
+`dist/` does not match a clean build. That check exists because the site once ran
+20 months behind `master` without anyone noticing.
+
+### Server notes
+
+- SSH is key-only; password authentication and root password login are disabled.
+- ufw allows 22 and 80 from anywhere, but **443 only from Cloudflare's published
+  ranges**, so the origin cannot be reached directly. Port 80 stays open because
+  certbot validates over HTTP-01 — do not close it without first moving renewal
+  to DNS-01.
+- Cloudflare's ranges change occasionally; refresh them from
+  <https://www.cloudflare.com/ips-v4> and `ips-v6` if the origin becomes
+  unreachable.
