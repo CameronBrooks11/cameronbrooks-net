@@ -40,7 +40,7 @@
         "chokidar": "5.0.0",
         "concurrently": "10.0.6",
         "postcss": "^8.4.33",
-        "prettier": "3.9.9",
+        "prettier": "3.9.10",
         "pug": "^3.0.2",
         "sass": "1.105.1",
         "shelljs": "0.10.0",
