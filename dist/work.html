@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Selected work by Cameron K. Brooks: parametric CAD tooling, hardware-engineering tools, open lab hardware, and rocketry and embedded control." />
+        <meta name="author" content="Cameron K. Brooks" />
+        <title>Selected Work</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="index.html">
+                        Cameron K. Brooks
+                        <!-- Navbar brand link -->
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"><!-- Navbar toggler button --></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <!-- Navbar navigation list -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">
+                                    Home
+                                    <!-- Home link -->
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">
+                                    About
+                                    <!-- About link -->
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="work.html">
+                                    Work
+                                    <!-- Work link -->
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="publications.html">
+                                    Publications
+                                    <!-- Publications link -->
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">
+                                    Contact
+                                    <!-- Contact link -->
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Header-->
+            <section class="py-5">
+                <div class="container px-5 mt-5">
+                    <div class="text-center">
+                        <h1 class="fw-bolder">Selected Work</h1>
+                        <p class="lead fw-normal text-muted mb-0">
+                            A few projects from each area I work in. The full list, with each project's docs, is in my
+                            <a href="https://cameronbrooks11.github.io/" target="_blank">project directory</a>
+                            .
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Theme 1-->
+            <section class="py-4">
+                <div class="container px-5">
+                    <h2 class="h4 fw-bolder">Parametric CAD &amp; the OpenSCAD ecosystem</h2>
+                    <p class="text-muted">Designs defined in code: parameterized, reproducible, and testable.</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item py-3">
+                            <a class="fw-bolder" href="https://github.com/CameronBrooks11/openscad-web" target="_blank">openscad-web</a>
+                            ·
+                            <a class="small" href="https://cameronbrooks11.github.io/openscad-web/" target="_blank">try it live</a>
+                            <div class="text-muted">A full OpenSCAD editor, 3D previewer, and customizer that runs in the browser on a WebAssembly build of the OpenSCAD engine — no install, no server.</div>
+                        </li>
+                        <li class="list-group-item py-3">
+                            <a class="fw-bolder" href="https://github.com/CameronBrooks11/DraftSCAD" target="_blank">DraftSCAD</a>
+                            <div class="text-muted">An OpenSCAD library for dimensioned, annotated engineering drawings — leader lines, hole centres, title blocks — generated from code.</div>
+                        </li>
+                        <li class="list-group-item py-3">
+                            <a class="fw-bolder" href="https://github.com/CameronBrooks11/scadbatch" target="_blank">scadbatch</a>
+                            <div class="text-muted">Batch-exports models from a parametric OpenSCAD design using CSV or Customizer JSON parameter sets. CLI, GUI, and Python API.</div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Theme 2-->
+            <section class="py-4">
+                <div class="container px-5">
+                    <h2 class="h4 fw-bolder">Hardware-engineering &amp; developer tooling</h2>
+                    <p class="text-muted">
+                        Tools that put engineering software under program control and check its output against declared intent — much of it now under
+                        <a href="https://heibench.com" target="_blank">heibench</a>
+                        .
+                    </p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item py-3">
+                            <a class="fw-bolder" href="https://github.com/heibench/gerberdiff" target="_blank">gerberdiff</a>
+                            ·
+                            <a class="small" href="https://heibench.com/gerberdiff/" target="_blank">docs</a>
+                            <div class="text-muted">Diffs PCB fabrication files (Gerber/Excellon), reporting exactly what moved, resized, was added, or was removed between revisions, with visual overlays and a CI-friendly exit code.</div>
+                        </li>
+                        <li class="list-group-item py-3">
+                            <a class="fw-bolder" href="https://github.com/heibench/partspec" target="_blank">partspec</a>
+                            <div class="text-muted">Checks a code-defined CAD part against a written specification of what it is supposed to be, so a geometry change that breaks the design contract fails like a unit test. Pre-alpha.</div>
+                        </li>
+                        <li class="list-group-item py-3">
+                            <a class="fw-bolder" href="https://github.com/CameronBrooks11/agent-policy" target="_blank">agent-policy</a>
+                            ·
+                            <a class="small" href="https://cameronbrooks11.github.io/agent-policy/" target="_blank">docs</a>
+                            <div class="text-muted">Generates every AI-coding-assistant config a repository needs from one canonical policy file, and detects drift in CI. Published to crates.io, npm, and PyPI.</div>
+                        </li>
+                        <li class="list-group-item py-3">
+                            <a class="fw-bolder" href="https://github.com/CameronBrooks11/freeboard" target="_blank">freeboard</a>
+                            ·
+                            <a class="small" href="https://cameronbrooks11.github.io/freeboard/" target="_blank">try it live</a>
+                            <div class="text-muted">A modernized rebuild of the Freeboard real-time dashboard builder: Vue 3, GraphQL and PostgreSQL, and a hardened gateway for HTTP, SSE, WebSocket, and MQTT sources.</div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Theme 3-->
+            <section class="py-4">
+                <div class="container px-5">
+                    <h2 class="h4 fw-bolder">Open scientific &amp; lab hardware</h2>
+                    <p class="text-muted">Open designs for research equipment, mostly with the FAST Research Group.</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item py-3">
+                            <a class="fw-bolder" href="https://github.com/uwo-fast/desktop-sheet-press" target="_blank">desktop-sheet-press</a>
+                            ·
+                            <a class="small" href="https://doi.org/10.1016/j.ohx.2024.e00566" target="_blank">paper</a>
+                            <div class="text-muted">An open-source cold and hot sheet press for testing polymer materials. I designed the electrical system, PID control, firmware, and data logging. Published in HardwareX.</div>
+                        </li>
+                        <li class="list-group-item py-3">
+                            <a class="fw-bolder" href="https://github.com/uwo-fast/pipe-fitting-SCAD" target="_blank">pipe-fitting-SCAD</a>
+                            ·
+                            <a class="small" href="https://doi.org/10.3390/jmmp9020065" target="_blank">paper</a>
+                            <div class="text-muted">Parametric, 3D-printable easy-connect pipe fittings in OpenSCAD.</div>
+                        </li>
+                        <li class="list-group-item py-3">
+                            <a class="fw-bolder" href="https://github.com/uwo-fast/open-source-bioreactor" target="_blank">open-source-bioreactor</a>
+                            <div class="text-muted">A composable, modular, and extensible open-source bioreactor design.</div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Theme 4-->
+            <section class="py-4">
+                <div class="container px-5">
+                    <h2 class="h4 fw-bolder">Rocketry &amp; embedded control</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item py-3">
+                            <a class="fw-bolder" href="https://github.com/heibench/orlab" target="_blank">orlab</a>
+                            ·
+                            <a class="small" href="https://heibench.com/orlab/" target="_blank">docs</a>
+                            <div class="text-muted">Scripts the OpenRocket flight simulator from Python, so simulations can be batch-run in parallel and analyzed as data.</div>
+                        </li>
+                        <li class="list-group-item py-3">
+                            <a class="fw-bolder" href="https://github.com/feastorg/dcmotorservo" target="_blank">DCMotorServo</a>
+                            <div class="text-muted">An Arduino library for controlling DC motors with rotary encoders.</div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Contributions-->
+            <section class="py-5">
+                <div class="container px-5 mb-5">
+                    <h2 class="h4 fw-bolder">Contributions elsewhere</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="https://github.com/cameronbrooks11" target="_blank">GitHub repositories</a></li>
+                        <li class="list-group-item"><a href="https://gitlab.com/cameronkbrooks" target="_blank">GitLab projects</a></li>
+                        <li class="list-group-item"><a href="https://osf.io/wcre4/" target="_blank">OSF projects</a></li>
+                        <li class="list-group-item"><a href="https://www.appropedia.org/User:CameronBrooks11" target="_blank">Appropedia articles</a></li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <!-- Footer-->
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto">
+                        <div class="small m-0 text-white">
+                            Copyright &copy; Cameron K. Brooks 2026
+                            <!-- Copyright text -->
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <a class="link-light small" href="contact.html">
+                            Contact
+                            <!-- Contact link -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

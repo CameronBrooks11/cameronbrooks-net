@@ -1,0 +1,69 @@
+doctype html
+html(lang='en')
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='Peer-reviewed publications by Cameron K. Brooks on open-source hardware, parametric design, and distributed manufacturing.')
+        meta(name='author', content='Cameron K. Brooks')
+
+        title Publications
+
+        // Favicon
+        link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
+
+        include includes/css.pug
+
+    body.d-flex.flex-column.h-100
+
+        main.flex-shrink-0
+
+            // Navigation
+            include includes/navbar.pug
+
+            // Page Content
+            section.py-5
+                .container.px-5.my-5
+                    .text-center.mb-5
+                        h1.fw-bolder Publications
+                        p.lead.fw-normal.text-muted.mb-0
+                            | Peer-reviewed journal articles, newest first. For the always-current list, see
+                            |
+                            a(href='https://orcid.org/0000-0002-1275-3267' target='_blank') ORCID
+                            |  or
+                            |
+                            a(href='https://scholar.google.com/citations?user=tN1pSrkAAAAJ' target='_blank') Google Scholar
+                            | .
+                    .row.justify-content-center
+                        .col-lg-10
+                            ol.list-group.list-group-flush(reversed)
+                                li.list-group-item.py-3
+                                    | Taherzadeh Fini, A.; #[strong Brooks, C. K.]; Romani, A.; Straatman, A. G.; Pearce, J. M.
+                                    | “Parametric Design of Easy-Connect Pipe Fitting Components Using Open-Source CAD and Fabrication Using 3D Printing.”
+                                    | #[em Journal of Manufacturing and Materials Processing] 2025, 9(2), 65.
+                                    br
+                                    a(href='https://doi.org/10.3390/jmmp9020065' target='_blank') doi:10.3390/jmmp9020065
+                                li.list-group-item.py-3
+                                    | Antonini, G.; Rahman, M. M.; #[strong Brooks, C.]; Santoro, D.; Muller, C.; Al-Omari, A.; Bell, K.; Pearce, J. M.
+                                    | “Portable Solar-Integrated Open-Source Chemistry Lab for Water Treatment with Electrolysis.”
+                                    | #[em Technologies] 2025, 13(2), 57.
+                                    br
+                                    a(href='https://doi.org/10.3390/technologies13020057' target='_blank') doi:10.3390/technologies13020057
+                                li.list-group-item.py-3
+                                    | Woods, M. C.; #[strong Brooks, C. K.]; Pearce, J. M.
+                                    | “Open-source cold and hot scientific sheet press for investigating polymer-based material properties.”
+                                    | #[em HardwareX] 2024, 19, e00566.
+                                    br
+                                    a(href='https://doi.org/10.1016/j.ohx.2024.e00566' target='_blank') doi:10.1016/j.ohx.2024.e00566
+                                li.list-group-item.py-3
+                                    | #[strong Brooks, C. K.]; Peplinski, J. E.; Pearce, J. M.
+                                    | “Overcoming Chip Shortages: Low-Cost Open-Source Parametric 3-D Printable Solderless SOIC to DIP Breakout Adapters.”
+                                    | #[em Inventions] 2023, 8(2), 61.
+                                    br
+                                    a(href='https://doi.org/10.3390/inventions8020061' target='_blank') doi:10.3390/inventions8020061
+
+        // Footer
+        include includes/footer.pug
+
+        include includes/scripts.pug
