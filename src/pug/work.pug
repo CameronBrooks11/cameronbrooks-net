@@ -1,0 +1,105 @@
+doctype html
+html(lang='en')
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='Selected work by Cameron K. Brooks: parametric CAD tooling, hardware-engineering tools, open lab hardware, and rocketry and embedded control.')
+        meta(name='author', content='Cameron K. Brooks')
+
+        title Selected Work
+
+        // Favicon
+        link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
+
+        include includes/css.pug
+
+    body.d-flex.flex-column.h-100
+
+        main.flex-shrink-0
+
+            // Navigation
+            include includes/navbar.pug
+
+            // Header
+            section.py-5
+                .container.px-5.mt-5
+                    .text-center
+                        h1.fw-bolder Selected Work
+                        p.lead.fw-normal.text-muted.mb-0
+                            | A few projects from each area I work in. The full list, with each project's docs, is in my
+                            |
+                            a(href='https://cameronbrooks11.github.io/' target='_blank') project directory
+                            | .
+
+            mixin project(name, href, desc, extraLabel, extraHref)
+                li.list-group-item.py-3
+                    a.fw-bolder(href=href target='_blank')= name
+                    if extraHref
+                        |  ·
+                        |
+                        a.small(href=extraHref target='_blank')= extraLabel
+                    .text-muted= desc
+
+            // Theme 1
+            section.py-4
+                .container.px-5
+                    h2.h4.fw-bolder Parametric CAD &amp; the OpenSCAD ecosystem
+                    p.text-muted Designs defined in code: parameterized, reproducible, and testable.
+                    ul.list-group.list-group-flush
+                        +project('openscad-web', 'https://github.com/CameronBrooks11/openscad-web', 'A full OpenSCAD editor, 3D previewer, and customizer that runs in the browser on a WebAssembly build of the OpenSCAD engine — no install, no server.', 'try it live', 'https://cameronbrooks11.github.io/openscad-web/')
+                        +project('DraftSCAD', 'https://github.com/CameronBrooks11/DraftSCAD', 'An OpenSCAD library for dimensioned, annotated engineering drawings — leader lines, hole centres, title blocks — generated from code.')
+                        +project('scadbatch', 'https://github.com/CameronBrooks11/scadbatch', 'Batch-exports models from a parametric OpenSCAD design using CSV or Customizer JSON parameter sets. CLI, GUI, and Python API.')
+
+            // Theme 2
+            section.py-4
+                .container.px-5
+                    h2.h4.fw-bolder Hardware-engineering &amp; developer tooling
+                    p.text-muted
+                        | Tools that put engineering software under program control and check its output against declared intent — much of it now under
+                        |
+                        a(href='https://heibench.com' target='_blank') heibench
+                        | .
+                    ul.list-group.list-group-flush
+                        +project('gerberdiff', 'https://github.com/heibench/gerberdiff', 'Diffs PCB fabrication files (Gerber/Excellon), reporting exactly what moved, resized, was added, or was removed between revisions, with visual overlays and a CI-friendly exit code.', 'docs', 'https://heibench.com/gerberdiff/')
+                        +project('partspec', 'https://github.com/heibench/partspec', 'Checks a code-defined CAD part against a written specification of what it is supposed to be, so a geometry change that breaks the design contract fails like a unit test. Pre-alpha.')
+                        +project('agent-policy', 'https://github.com/CameronBrooks11/agent-policy', 'Generates every AI-coding-assistant config a repository needs from one canonical policy file, and detects drift in CI. Published to crates.io, npm, and PyPI.', 'docs', 'https://cameronbrooks11.github.io/agent-policy/')
+                        +project('freeboard', 'https://github.com/CameronBrooks11/freeboard', 'A modernized rebuild of the Freeboard real-time dashboard builder: Vue 3, GraphQL and PostgreSQL, and a hardened gateway for HTTP, SSE, WebSocket, and MQTT sources.', 'try it live', 'https://cameronbrooks11.github.io/freeboard/')
+
+            // Theme 3
+            section.py-4
+                .container.px-5
+                    h2.h4.fw-bolder Open scientific &amp; lab hardware
+                    p.text-muted Open designs for research equipment, mostly with the FAST Research Group.
+                    ul.list-group.list-group-flush
+                        +project('desktop-sheet-press', 'https://github.com/uwo-fast/desktop-sheet-press', 'An open-source cold and hot sheet press for testing polymer materials. I designed the electrical system, PID control, firmware, and data logging. Published in HardwareX.', 'paper', 'https://doi.org/10.1016/j.ohx.2024.e00566')
+                        +project('pipe-fitting-SCAD', 'https://github.com/uwo-fast/pipe-fitting-SCAD', 'Parametric, 3D-printable easy-connect pipe fittings in OpenSCAD.', 'paper', 'https://doi.org/10.3390/jmmp9020065')
+                        +project('open-source-bioreactor', 'https://github.com/uwo-fast/open-source-bioreactor', 'A composable, modular, and extensible open-source bioreactor design.')
+
+            // Theme 4
+            section.py-4
+                .container.px-5
+                    h2.h4.fw-bolder Rocketry &amp; embedded control
+                    ul.list-group.list-group-flush
+                        +project('orlab', 'https://github.com/heibench/orlab', 'Scripts the OpenRocket flight simulator from Python, so simulations can be batch-run in parallel and analyzed as data.', 'docs', 'https://heibench.com/orlab/')
+                        +project('DCMotorServo', 'https://github.com/feastorg/dcmotorservo', 'An Arduino library for controlling DC motors with rotary encoders.')
+
+            // Contributions
+            section.py-5
+                .container.px-5.mb-5
+                    h2.h4.fw-bolder Contributions elsewhere
+                    ul.list-group.list-group-flush
+                        li.list-group-item
+                            a(href='https://github.com/cameronbrooks11' target='_blank') GitHub repositories
+                        li.list-group-item
+                            a(href='https://gitlab.com/cameronkbrooks' target='_blank') GitLab projects
+                        li.list-group-item
+                            a(href='https://osf.io/wcre4/' target='_blank') OSF projects
+                        li.list-group-item
+                            a(href='https://www.appropedia.org/User:CameronBrooks11' target='_blank') Appropedia articles
+
+        // Footer
+        include includes/footer.pug
+
+        include includes/scripts.pug

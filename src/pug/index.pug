@@ -28,52 +28,50 @@ html(lang='en')
                     .row.gx-5.align-items-center.justify-content-center
                         .col-lg-8.col-xl-7.col-xxl-6
                             .my-5.text-center.text-xl-start
-                                h1.display-5.fw-bolder.text-white.mb-2 Sharing My Journey, Experiences, and Adventures
-                                p.lead.fw-normal.text-white-50.mb-4 This is a virtual collection of my developments, innovations, ideas, thoughts, opinions, accomplishments, research projects, engineering solutions, contributions, and favourite moments.
+                                h1.display-5.fw-bolder.text-white.mb-2 Open, modular systems — from the board to the runtime.
+                                p.lead.fw-normal.text-white-50.mb-4 I'm a graduate researcher in Electrical &amp; Computer Engineering at Western University. I design open-source hardware and software for scientific and industrial systems, built from parts that can be recombined, verified, and shared. I try to make things that are generally useful.
                                 .d-grid.gap-3.d-sm-flex.justify-content-sm-center.justify-content-xl-start
-                                    a.btn.btn-primary.btn-lg.px-4.me-sm-3(href='#features') Learn More
-                                    a.btn.btn-outline-light.btn-lg.px-4(href='https://nexus.cameronbrooks.net/') Knowledge Graph
+                                    a.btn.btn-primary.btn-lg.px-4.me-sm-3(href='work.html') Selected Work
+                                    a.btn.btn-outline-light.btn-lg.px-4(href='publications.html') Publications
                         .col-xl-5.col-xxl-6.d-none.d-xl-block.text-center
-                            img.img-fluid.rounded-3.my-5(src='assets/recurtreescad_force_points.PNG', alt='...')
+                            img.img-fluid.rounded-3.my-5(src='assets/recurtreescad_force_points.PNG', alt='Force points on a recursive tree model generated in OpenSCAD')
 
             // Features section ------------------------------------------------
             section#features.py-5
                 .container.px-5.my-5
                     .row.gx-5
                         .col-lg-4.mb-5.mb-lg-0
-                            h2.fw-bolder.mb-0 Learn more about some of the things I'm building.
+                            h2.fw-bolder.mb-0 What I work on.
                         .col-lg-8
                             .row.gx-5.row-cols-1.row-cols-md-2
                                 .col.mb-5.h-100
                                     .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
-                                        i.bi.bi-graph-up
-                                    h2.h5 Knowledge Graph
+                                        i.bi.bi-tools
+                                    h2.h5 Selected Work
                                     p.mb-0
-                                        | Explore my interactive knowledge graph that organizes and visualizes connections between ideas, projects, and contributions.
-                                    a.btn.btn-light.btn-sm.mt-2(href='https://nexus.cameronbrooks.net/' target='_blank') Visit Knowledge Graph
-                                .col.mb-5.h-100
-                                    .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
-                                        i.bi.bi-share
-                                    h2.h5 External Contributions
-                                    p.mb-0
-                                        | Explore my engagements and contributions beyond this site, from wikis to open-source to community-driven content.
-                                    a.btn.btn-light.btn-sm.mt-2(href='external_contrib.html') Visit External Contributions
-                                .col.mb-5.h-100
-                                    .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
-                                        i.bi.bi-building
-                                    h2.h5 Business Ventures
-                                    p.mb-0
-                                        | Discover my entrepreneurial initiatives and collaborations, showcasing innovation and impact.
-                                    a.btn.btn-light.btn-sm.mt-2(href='https://integrumsys.com' target='_blank') Visit Business Ventures
+                                        | Parametric CAD tooling, hardware-engineering verification, open lab hardware, and embedded control.
+                                    a.btn.btn-light.btn-sm.mt-2(href='work.html') See Selected Work
                                 .col.mb-5.h-100
                                     .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
                                         i.bi.bi-book
                                     h2.h5 Publications
                                     p.mb-0
-                                        | Browse through my publications, articles, and research papers highlighting my academic and professional journey.
-                                    a.btn.btn-light.btn-sm.mt-2(href='https://orcid.org/0000-0002-1275-3267' target='_blank') ORCID Profile
-                                    br
-                                    a.btn.btn-light.btn-sm.mt-2(href='https://scholar.google.com/citations?user=tN1pSrkAAAAJ&hl=en&oi=ao' target='_blank') Google Scholar
+                                        | Four peer-reviewed journal articles on open-source hardware and distributed manufacturing.
+                                    a.btn.btn-light.btn-sm.mt-2(href='publications.html') See Publications
+                                .col.mb-5.h-100
+                                    .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
+                                        i.bi.bi-building
+                                    h2.h5 Integrum Systems
+                                    p.mb-0
+                                        | The systems-integration company I founded in 2026.
+                                    a.btn.btn-light.btn-sm.mt-2(href='https://integrumsys.com' target='_blank') Visit Integrum Systems
+                                .col.mb-5.h-100
+                                    .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
+                                        i.bi.bi-graph-up
+                                    h2.h5 Knowledge Graph
+                                    p.mb-0
+                                        | An interactive graph of the connections between my ideas, projects, and contributions.
+                                    a.btn.btn-light.btn-sm.mt-2(href='https://nexus.cameronbrooks.net/' target='_blank') Visit Knowledge Graph
 
         // Footer
         include includes/footer.pug
