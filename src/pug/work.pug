@@ -48,22 +48,24 @@ html(lang='en')
                     h2.h4.fw-bolder Parametric CAD &amp; the OpenSCAD ecosystem
                     p.text-muted Designs defined in code: parameterized, reproducible, and testable.
                     ul.list-group.list-group-flush
-                        +project('openscad-web', 'https://github.com/CameronBrooks11/openscad-web', 'A full OpenSCAD editor, 3D previewer, and customizer that runs in the browser on a WebAssembly build of the OpenSCAD engine — no install, no server.', 'try it live', 'https://cameronbrooks11.github.io/openscad-web/')
-                        +project('DraftSCAD', 'https://github.com/CameronBrooks11/DraftSCAD', 'An OpenSCAD library for dimensioned, annotated engineering drawings — leader lines, hole centres, title blocks — generated from code.')
-                        +project('scadbatch', 'https://github.com/CameronBrooks11/scadbatch', 'Batch-exports models from a parametric OpenSCAD design using CSV or Customizer JSON parameter sets. CLI, GUI, and Python API.')
+                        +project('openscad-web', 'https://github.com/CameronBrooks11/openscad-web', 'A full OpenSCAD editor, 3D previewer, and customizer that runs in the browser on a WebAssembly build of the OpenSCAD engine. No install, no server.', 'try it live', 'https://cameronbrooks11.github.io/openscad-web/')
+                        +project('DraftSCAD', 'https://github.com/CameronBrooks11/DraftSCAD', 'An OpenSCAD library for dimensioned, annotated engineering drawings (leader lines, hole centres, title blocks) generated from code.', 'docs', 'https://cameronbrooks11.github.io/DraftSCAD/')
+                        +project('scadbatch', 'https://github.com/CameronBrooks11/scadbatch', 'Batch-exports models from a parametric OpenSCAD design using CSV or Customizer JSON parameter sets. CLI, GUI, and Python API.', 'docs', 'https://cameronbrooks11.github.io/scadbatch/')
+                        +project('scadman', 'https://github.com/CameronBrooks11/scadman', 'A project-oriented package and dependency manager for OpenSCAD libraries, scripts, and reusable design assets. Alpha.', 'docs', 'https://cameronbrooks11.github.io/scadman/')
 
             // Theme 2
             section.py-4
                 .container.px-5
                     h2.h4.fw-bolder Hardware-engineering &amp; developer tooling
                     p.text-muted
-                        | Tools that put engineering software under program control and check its output against declared intent — much of it now under
+                        | Tools that put engineering software under program control and check its output against declared intent, much of it now under
                         |
                         a(href='https://heibench.com' target='_blank') heibench
                         | .
                     ul.list-group.list-group-flush
                         +project('gerberdiff', 'https://github.com/heibench/gerberdiff', 'Diffs PCB fabrication files (Gerber/Excellon), reporting exactly what moved, resized, was added, or was removed between revisions, with visual overlays and a CI-friendly exit code.', 'docs', 'https://heibench.com/gerberdiff/')
                         +project('partspec', 'https://github.com/heibench/partspec', 'Checks a code-defined CAD part against a written specification of what it is supposed to be, so a geometry change that breaks the design contract fails like a unit test. Pre-alpha.')
+                        +project('netspec', 'https://github.com/heibench/netspec', 'Verifies PCB connectivity against declared engineering intent, using KiCad as the oracle.')
                         +project('agent-policy', 'https://github.com/CameronBrooks11/agent-policy', 'Generates every AI-coding-assistant config a repository needs from one canonical policy file, and detects drift in CI. Published to crates.io, npm, and PyPI.', 'docs', 'https://cameronbrooks11.github.io/agent-policy/')
                         +project('freeboard', 'https://github.com/CameronBrooks11/freeboard', 'A modernized rebuild of the Freeboard real-time dashboard builder: Vue 3, GraphQL and PostgreSQL, and a hardened gateway for HTTP, SSE, WebSocket, and MQTT sources.', 'try it live', 'https://cameronbrooks11.github.io/freeboard/')
 
@@ -76,6 +78,7 @@ html(lang='en')
                         +project('desktop-sheet-press', 'https://github.com/uwo-fast/desktop-sheet-press', 'An open-source cold and hot sheet press for testing polymer materials. I designed the electrical system, PID control, firmware, and data logging. Published in HardwareX.', 'paper', 'https://doi.org/10.1016/j.ohx.2024.e00566')
                         +project('pipe-fitting-SCAD', 'https://github.com/uwo-fast/pipe-fitting-SCAD', 'Parametric, 3D-printable easy-connect pipe fittings in OpenSCAD.', 'paper', 'https://doi.org/10.3390/jmmp9020065')
                         +project('open-source-bioreactor', 'https://github.com/uwo-fast/open-source-bioreactor', 'A composable, modular, and extensible open-source bioreactor design.')
+                        +project('biropette', 'https://github.com/CameronBrooks11/biropette', 'An open-source, parametric, 3D-printable micropipette for accurate, low-cost liquid handling.')
 
             // Theme 4
             section.py-4
